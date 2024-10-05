@@ -1,8 +1,8 @@
 import { useForm, Controller } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useCreateArticleMutation, useCacheClearMutation } from "../apiSlice";
 import { IconInfo } from "./IconInfo";
-import { CreateNew, BackIcon } from "../Icons.jsx";
+import {  BackIcon } from "../Icons.jsx";
 import { FormElement } from "./FormElement.jsx";
 export default function CreateForm() {
     const navigate = useNavigate();
@@ -33,8 +33,8 @@ export default function CreateForm() {
   return (
     <div className="xl:container mx-auto mb-32">
       <div className="flex justify-center my-8">
-        <div className="pt-12 text-left">
-          <IconInfo icon={<BackIcon />} />
+        <div className="pt-12 text-left mr-10">
+          <Link to="/"><BackIcon /></Link>
         </div>
         <h1 className="text-3xl sm:text-4xl text-pink-500 uppercase pt-12">
           Create
@@ -42,9 +42,6 @@ export default function CreateForm() {
       </div>
       <div className="px-4 sm:w-2/3 lg:w-1/2 mx-auto">
         <div className="rounded-lg shadow-lg bg-white -mt-24 py-10 md:py-12 px-4 md:px-6">
-          {/* <div className="text-center">
-            <IconInfo icon={<CreateNew />} text={"Add Article"} />
-          </div> */}
           <div className="">
             <form onSubmit={handleSubmit(onSubmit)}>
               <Controller
