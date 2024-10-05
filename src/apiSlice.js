@@ -6,7 +6,22 @@ export const api = createApi({
     getArticle: builder.query({
       query: () => "/get/articles",
     }),
+    createArticle: builder.mutation({
+      query: (data) => ({
+        url: "/add/articles",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    cacheClear: builder.mutation({
+      query: () => ({
+        url: "/rest/clear/all/caches?_format=json",
+        method: "POST",
+        body:{}
+      }),
+    }),
   }),
 });
+// https://www.skarchen.com/add/articles
 
-export const { useGetArticleQuery } = api;
+export const { useGetArticleQuery, useCreateArticleMutation,useCacheClearMutation  } = api;
