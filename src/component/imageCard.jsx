@@ -14,6 +14,7 @@ export default function ImageCard({ title, body, tag, img, author, time  }) {
         </div>
         <div className="middle mx-2">
           <h2 className="title text-2xl font-bold capitalize">{title}</h2>
+          <h1> Title added to Pull Request</h1>
           <div className="excerpt"> {body}
             this is some default dummy text which add by default every time.
             this is some default dummy text which add by default every time.
@@ -27,6 +28,7 @@ export default function ImageCard({ title, body, tag, img, author, time  }) {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
