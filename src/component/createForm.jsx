@@ -39,6 +39,7 @@ export default function CreateForm() {
         <h1 className="text-3xl sm:text-4xl text-pink-500 uppercase pt-12">
           Create
         </h1>
+        <h2> Done</h2>
       </div>
       <div className="px-4 sm:w-2/3 lg:w-1/2 mx-auto">
         <div className="rounded-lg shadow-lg bg-white -mt-24 py-10 md:py-12 px-4 md:px-6">
